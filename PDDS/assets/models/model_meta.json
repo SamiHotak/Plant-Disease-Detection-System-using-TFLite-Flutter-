@@ -1,0 +1,6 @@
+{
+  "img_size": 224,
+  "num_classes": 38,
+  "val_accuracy": 0.9416965352449224,
+  "input_range": "0-255 raw float (preprocessing is in-graph)"
+}

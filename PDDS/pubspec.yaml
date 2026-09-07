@@ -1,0 +1,50 @@
+name: plant_disease_detector
+description: On-device plant disease detection with TensorFlow Lite.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 0.11.0+ required: 0.10.x calls UnmodifiableUint8ListView, which was
+  # removed from dart:typed_data in Dart 3.4 and fails to compile on any
+  # modern SDK. The public API is unchanged between 0.10 and 0.12.
+  tflite_flutter: ^0.12.1
+  image_picker: ^1.0.7 # camera + gallery
+  image: ^4.1.7 # decode / EXIF orient / resize
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Wide range so this resolves on both older and current Flutter SDKs.
+  flutter_lints: ">=3.0.0 <7.0.0"
+  # Build-time tool only, so it belongs here rather than in dependencies.
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/plant_disease_model.tflite
+    - assets/models/labels.txt
+    # Declared as a directory, not a filename: a missing developer.jpg
+    # would break the build if listed explicitly, whereas an empty
+    # directory is fine and the UI falls back to initials.
+    - assets/images/
+
+# Icon generator settings. This is a TOP-LEVEL key: it must start at
+# column 1, in line with "name:", "dependencies:" and "flutter:" above.
+# Indenting it by even two spaces makes it a child of "flutter:", which
+# is exactly what produces the error:
+#   Unexpected child "flutter_launcher_icons" found under "flutter"
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#0A0F0D"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
