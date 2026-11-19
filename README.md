@@ -15,12 +15,16 @@ internet connection, no server, and no image ever leaves the phone.
 
 ## Screenshots
 
+<!-- Screenshots are not in the repository yet. To show them:
+     1. Put home.png, result.png, about.png and rejected.png in docs/screenshots/
+     2. Remove the comment markers around the table below.
+
 | Home | Diagnosis | Coverage | Rejected input |
 |:---:|:---:|:---:|:---:|
 | <img src="docs/screenshots/home.png" width="180"/> | <img src="docs/screenshots/result.png" width="180"/> | <img src="docs/screenshots/about.png" width="180"/> | <img src="docs/screenshots/rejected.png" width="180"/> |
+-->
 
-> Put your screenshots in `docs/screenshots/` with these filenames and they will
-> appear here automatically.
+Screenshots will be added here.
 
 ---
 
@@ -174,7 +178,7 @@ disease. PDDS layers three checks around the model:
 | 3 | *(optional)* trained `Not_a_plant` class | Green non-plant objects |
 
 Layers 1 and 2 are active by default. Layer 3 requires retraining and is
-documented in [`NOT_A_PLANT_TRAINING.md`](NOT_A_PLANT_TRAINING.md); the app
+documented in [`PDDS/NOT_A_PLANT_TRAINING.md`](PDDS/NOT_A_PLANT_TRAINING.md); the app
 detects such a class automatically with no code changes.
 
 ---
