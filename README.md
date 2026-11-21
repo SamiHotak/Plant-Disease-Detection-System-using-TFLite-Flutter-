@@ -342,7 +342,7 @@ silently predicting nonsense.
 ## Author
 
 **Fazlurrahman Hotaki**
-Computer Science Student & Developer — Ghalib University, Herat, Afghanistan
+Software Engineering Graduate & Developer — Ghalib University, Herat, Afghanistan
 
 📧 fazlurrahmanhotaki512@gmail.com
 
